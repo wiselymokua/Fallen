@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #252222;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #edf3ed;
+    color: rgb(8, 8, 8);
+    padding: 1rem;
+    text-align: left;
+}
+
+p {
+    margin: 16px 0;
+    background-color: #dfefff;
+    padding: 14px 16px;
+    border-radius: 8px;
+}
+
+h1 {
+    margin: 10px 0;
+    color: #000000;
+}
+
+h2,
+h3 {
+    margin: 10px 0;
+    color: #69a51a;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d9f2d0;
+    overflow: hidden;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: scale-down;
+    display: block;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: inline-block;
+    margin: 0 15px;
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a:focus,
+nav ul li a.active {
+    color: #ffffff;
+    background-color: #2e8b57;
+}
+
+.contact-left {
+    text-align: left;
+}
+
+.contact-left ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.contact-left li {
+    margin: 8px 0;
+    color: #2e8b57;
+}
