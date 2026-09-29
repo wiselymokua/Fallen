@@ -55,7 +55,7 @@
                         </li>
                     </ul>
                     <ul>
-                        <li><a href="https://www.linkedin.com/in/wisely-mokua" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.linkedin.com/in/wisely-mokua-b836ab419" target="_blank">LinkedIn</a></li>
                         <li><a href="https://github.com/wiselymokua" target="_blank">GitHub</a></li>
                 </div>
             </div>
