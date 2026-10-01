@@ -1,36 +1,34 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const projectCards = document.querySelectorAll(".project-card");
+const projectDialog = document.querySelector("#project-dialog");
+const dialogTitle = document.querySelector("#project-dialog-title");
+const dialogImage = document.querySelector("#project-dialog-image");
+const dialogDescription = document.querySelector("#project-dialog-description");
+const dialogGithub = document.querySelector("#project-dialog-github");
+const closeButton = document.querySelector(".project-dialog-close");
 
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
+projectCards.forEach((card) => {
+    card.addEventListener("click", () => {
+        dialogTitle.textContent = card.dataset.title;
+        dialogImage.src = card.dataset.image;
+        dialogImage.alt = `${card.dataset.title} project preview`;
+        dialogDescription.textContent = card.dataset.description;
 
-    navLinks.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-}
+        if (card.dataset.github) {
+            dialogGithub.href = card.dataset.github;
+            dialogGithub.hidden = false;
+        } else {
+            dialogGithub.removeAttribute("href");
+            dialogGithub.hidden = true;
+        }
 
-const navItems = document.querySelectorAll('nav a');
-
-navItems.forEach((link) => {
-    link.addEventListener('click', () => {
-        navItems.forEach((item) => item.classList.remove('active'));
-        link.classList.add('active');
+        projectDialog.showModal();
     });
 });
 
-const revealElements = document.querySelectorAll('.reveal');
+closeButton.addEventListener("click", () => projectDialog.close());
 
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    },
-    { threshold: 0.18 }
-);
-
-revealElements.forEach((element) => observer.observe(element));
+projectDialog.addEventListener("click", (event) => {
+    if (event.target === projectDialog) {
+        projectDialog.close();
+    }
+});
