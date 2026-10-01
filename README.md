@@ -13,18 +13,18 @@
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
-        <nav></nav>
-        <img src="Profile picture.png" alt="Logo" class="logo" width="200" height="200">
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <nav>
+            <img src="Profile picture.png" alt="Logo" class="logo" width="200" height="200">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
- <main>
+  <main>
         <div class="hero">
             <h3>HELLO I'M WISELY MOKUA</h3>
             <p>An aspiring web developer with a passion for creating beautiful and functional websites.</p>
