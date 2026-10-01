@@ -6,21 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
-        </div>
         <nav>
             <img src="Profile picture.png" alt="Logo" class="logo">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+    </header>
+
+<main>
         <div class="hero">
             <h3>HELLO I'M WISELY MOKUA</h3>
             <p>An aspiring web developer with a passion for creating beautiful and functional websites.</p>
@@ -33,11 +37,103 @@
                     cyber cafes.</p>
             </div>
         </div>
+        <div id="Skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li><img src="Skills/HTML.png" alt=""><span>HTML</span></li>
+                    <li><img src="Skills/CSS.png" alt=""><span>CSS</span></li>
+                    <li><img src="Skills/JavaScript.png" alt=""><span>JavaScript</span></li>
+                    <li><img src="Skills/React.png" alt=""><span>React</span></li>
+                    <li><img src="Skills/GitHub.png" alt=""><span>GitHub</span></li>
+                    <li><img src="Skills/Vs%20Code.png" alt=""><span>VS Code</span></li>
+                    <li><img src="Skills/MongoDB.png" alt=""><span>MongoDB</span></li>
+                </ul>
+            </div>
+
+ </div>
         <div id="projects">
             <div class="container">
                 <h2>Projects</h2>
-                <p>Coming Soon-this section is under development:</p>
-                <!-- Project items will be added here -->
+                <p>Here are a few examples of the work I am doing done.</p>
+                <ul class="project-gallery">
+                    <li>
+                        <button class="project-card" type="button" data-title="Exercise"
+                            data-description="A project focused on exercise and fitness." data-image="Work/Exercise.png"
+                            aria-haspopup="dialog">
+                            <img src="Work/Exercise.png" alt="">
+                            <strong>Exercise</strong>
+                            <span>A project focused on exercise and fitness.</span>
+                            <span class="project-card-prompt">View details</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="project-card" type="button" data-title="Food Delivery"
+                            data-description="A project exploring a food delivery experience."
+                            data-image="Work/Food Delivery.png" aria-haspopup="dialog">
+                            <img src="Work/Food Delivery.png" alt="">
+                            <strong>Food Delivery</strong>
+                            <span>A project exploring a food delivery experience.</span>
+                            <span class="project-card-prompt">View details</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="project-card" type="button" data-title="Maps"
+                            data-description="A project focused on maps and location information."
+                            data-image="Work/Maps.png" aria-haspopup="dialog">
+                            <img src="Work/Maps.png" alt="">
+                            <strong>Maps</strong>
+                            <span>A project focused on maps and location information.</span>
+                            <span class="project-card-prompt">View details</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="project-card" type="button" data-title="My Portfolio"
+                            data-description="A project showcasing my skills and experience."
+                            data-image="Work/Portfolio.png" data-github="https://github.com/wiselymokua/walk"
+                            aria-haspopup="dialog">
+                            <img src="Work/Portfolio.png" alt="">
+                            <strong>My Portfolio</strong>
+                            <span>A project showcasing my skills and experience.</span>
+                            <span class="project-card-prompt">View details</span>
+                        </button>
+                    </li>
+                </ul>
+                <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+                    <div class="project-dialog-heading">
+                        <h3 id="project-dialog-title"></h3>
+                        <button class="project-dialog-close" type="button">Close</button>
+                    </div>
+                    <img class="project-dialog-image" id="project-dialog-image" src="" alt="">
+                    <p id="project-dialog-description"></p>
+                    <p><strong>Technology used for development:</strong> HTML, CSS and JavaScript.</p>
+                    <p id="project-status"><strong>Status:</strong> Still Under Development. Coming soon.</p>
+                    <a id="project-dialog-github" href="" target="_blank" rel="noopener noreferrer" hidden>View this
+                        project on GitHub</a>
+                </dialog>
+            </div>
+        </div>
+        <div id="services">
+            <div class="container">
+                <h2>Services</h2>
+                <ul class="service-list">
+                    <li>
+                        <img src="Services/Web Development.png"
+                            alt="A hand reaches toward a glowing digital interface labeled WEB DEVELOPMENT, surrounded by icons for code, cloud services, mobile devices, documents, laptops, and databases on a dark blue connected technology background, creating a modern and innovative atmosphere">
+                        <h3>Basic Website Development</h3>
+                        <p>Building websites with HTML, CSS, JavaScript, and React.</p>
+                    </li>
+                    <li>
+                        <img src="Services/Responsive Design.png" alt="Responsive design preview across screen sizes">
+                        <h3>Basic Responsive Web Design</h3>
+                        <p>Creating layouts that adapt to phones, tablets, and desktop screens.</p>
+                    </li>
+                    <li>
+                        <img src="Services/website update.png" alt="Website update preview">
+                        <h3>Basic Website Updates</h3>
+                        <p>Improving the content, layout, and styling of existing web pages.</p>
+                    </li>
+                </ul>
             </div>
         </div>
         <div id="contact">
@@ -46,23 +142,22 @@
                     <h2>Contact Me</h2>
                     <p>If you would like to get in touch with me reach out to me via
                         email or social media.</p>
-                    <ul>
-                        <li>Phone:0727817470
-                        <li>Email: mokuawisely83@gmail.com</li>
-                        <li>LinkedIn: linkedin.com/Wisely Mokua</li>
-                        <li>GitHub: github.com/wiselymokua</li>
-                        <li>Location:Nairobi,Kenya
-                        </li>
+                    <ul class="contact-details">
+                        <li><img src="Contact/phone.png" alt=""><a href="tel:+254727817470">072 781 7470</a></li>
+                        <li><img src="Contact/E mail.png" alt=""><a
+                                href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mokuawisely83%40gmail.com"
+                                target="_blank" rel="noopener noreferrer">mokuawisely83@gmail.com</a></li>
+                        <li><img src="Contact/Linked in.png" alt=""><a
+                                href="https://www.linkedin.com/in/wisely-mokua-b836ab419" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><img src="Contact/Github.png" alt=""><a href="https://github.com/wiselymokua"
+                                target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><img src="Contact/Location.png" alt=""><span>Nairobi, Kenya</span></li>
                     </ul>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/wisely-mokua-b836ab419" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://github.com/wiselymokua" target="_blank">GitHub</a></li>
                 </div>
             </div>
         </div>
-    </header>
-
-    </div>
+    </main>
 </body>
 
 </html>
