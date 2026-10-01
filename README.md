@@ -13,14 +13,14 @@
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <img src="Profile picture.png" alt="Logo" class="logo" width="50" height="50">
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav></nav>
+        <img src="Profile picture.png" alt="Logo" class="logo" width="200" height="200">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
         </nav>
     </header>
 
@@ -47,11 +47,11 @@
                     <li><img src="Skills/React.png" alt="" width="50" height="50"><span>React</span></li>
                     <li><img src="Skills/GitHub.png" alt="" width="50" height="50"><span>GitHub</span></li>
                     <li><img src="Skills/Vs%20Code.png" alt="" width="50" height="50"><span>VS Code</span></li>
-                    <li><img src="Skills/MongoDB.png" alt=""><span>MongoDB</span></li>
+                    <li><img src="Skills/MongoDB.png" alt="" width="50" height="50"><span>MongoDB</span></li>
                 </ul>
             </div>
 
-   </div>
+ </div>
         <div id="projects">
             <div class="container">
                 <h2>Projects</h2>
@@ -61,7 +61,7 @@
                         <button class="project-card" type="button" data-title="Exercise"
                             data-description="A project focused on exercise and fitness." data-image="Work/Exercise.png"
                             aria-haspopup="dialog">
-                            <img src="Work/Exercise.png" alt="" width="50" height="50">
+                            <img src="Work/Exercise.png" alt="" width="100" height="100">
                             <strong>Exercise</strong>
                             <span>A project focused on exercise and fitness.</span>
                             <span class="project-card-prompt">View details</span>
@@ -71,7 +71,7 @@
                         <button class="project-card" type="button" data-title="Food Delivery"
                             data-description="A project exploring a food delivery experience."
                             data-image="Work/Food Delivery.png" aria-haspopup="dialog">
-                            <img src="Work/Food Delivery.png" alt="" width="50" height="50">
+                            <img src="Work/Food Delivery.png" alt="" width="100" height="100">
                             <strong>Food Delivery</strong>
                             <span>A project exploring a food delivery experience.</span>
                             <span class="project-card-prompt">View details</span>
@@ -81,7 +81,7 @@
                         <button class="project-card" type="button" data-title="Maps"
                             data-description="A project focused on maps and location information."
                             data-image="Work/Maps.png" aria-haspopup="dialog">
-                            <img src="Work/Maps.png" alt="" width="50" height="50">
+                            <img src="Work/Maps.png" alt="" width="100" height="100">
                             <strong>Maps</strong>
                             <span>A project focused on maps and location information.</span>
                             <span class="project-card-prompt">View details</span>
@@ -92,7 +92,7 @@
                             data-description="A project showcasing my skills and experience."
                             data-image="Work/Portfolio.png" data-github="https://github.com/wiselymokua/walk"
                             aria-haspopup="dialog">
-                            <img src="Work/Portfolio.png" alt="" width="50" height="50">
+                            <img src="Work/Portfolio.png" alt="" width="100" height="100">
                             <strong>My Portfolio</strong>
                             <span>A project showcasing my skills and experience.</span>
                             <span class="project-card-prompt">View details</span>
@@ -104,7 +104,7 @@
                         <h3 id="project-dialog-title"></h3>
                         <button class="project-dialog-close" type="button">Close</button>
                     </div>
-                    <img class="project-dialog-image" id="project-dialog-image" src="" alt=""width="50" height="50">
+                    <img class="project-dialog-image" id="project-dialog-image" src="" alt="">
                     <p id="project-dialog-description"></p>
                     <p><strong>Technology used for development:</strong> HTML, CSS and JavaScript.</p>
                     <p id="project-status"><strong>Status:</strong> Still Under Development. Coming soon.</p>
@@ -120,18 +120,18 @@
                     <li>
                         <img src="Services/Web Development.png"
                             alt="A hand reaches toward a glowing digital interface labeled WEB DEVELOPMENT, surrounded by icons for code, cloud services, mobile devices, documents, laptops, and databases on a dark blue connected technology background"
-                            width="50" height="50">
+                            width="100" height="100">
                         <h3>Basic Website Development</h3>
                         <p>Building websites with HTML, CSS, JavaScript, and React.</p>
                     </li>
                     <li>
                         <img src="Services/Responsive Design.png" alt="Responsive design preview across screen sizes"
-                            width="50" height="50">
+                            width="100" height="100">
                         <h3>Basic Responsive Web Design</h3>
                         <p>Creating layouts that adapt to phones, tablets, and desktop screens.</p>
                     </li>
                     <li>
-                        <img src="Services/website update.png" alt="Website update preview" width="50" height="50">
+                        <img src="Services/website update.png" alt="Website update preview" width="100" height="100">
                         <h3>Basic Website Updates</h3>
                         <p>Improving the content, layout, and styling of existing web pages.</p>
                     </li>
