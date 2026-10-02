@@ -14,7 +14,7 @@
     <header>
         <h1>Welcome to My Portfolio</h1>
         <nav>
-            <img src="Profile%20picture.png" alt="Logo" class="logo" width="200" height="200">
+            <img src="Profile%20picture.png" alt="Logo" class="logo">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -23,8 +23,8 @@
             </ul>
         </nav>
     </header>
-    
- <main>
+
+  <main>
         <div class="hero">
             <h3>HELLO I'M WISELY MOKUA</h3>
             <p>An aspiring web developer with a passion for creating beautiful and functional websites.</p>
@@ -41,17 +41,17 @@
             <div class="container">
                 <h2>Skills</h2>
                 <ul class="skills-list">
-                    <li><img src="Skills/HTML.png" alt="" width="50" height="50"><span>HTML</span></li>
-                    <li><img src="Skills/CSS.png" alt="" width="50" height="50"><span>CSS</span></li>
-                    <li><img src="Skills/JavaScript.png" alt="" width="50" height="50"><span>JavaScript</span></li>
-                    <li><img src="Skills/React.png" alt="" width="50" height="50"><span>React</span></li>
-                    <li><img src="Skills/GitHub.png" alt="" width="50" height="50"><span>GitHub</span></li>
-                    <li><img src="Skills/Vs%20Code.png" alt="" width="50" height="50"><span>VS Code</span></li>
-                    <li><img src="Skills/MongoDB.png" alt="" width="50" height="50"><span>MongoDB</span></li>
+                    <li><img src="Skills/HTML.png" alt=""><span>HTML</span></li>
+                    <li><img src="Skills/CSS.png" alt=""><span>CSS</span></li>
+                    <li><img src="Skills/JavaScript.png" alt=""><span>JavaScript</span></li>
+                    <li><img src="Skills/React.png" alt=""><span>React</span></li>
+                    <li><img src="Skills/GitHub.png" alt=""><span>GitHub</span></li>
+                    <li><img src="Skills/Vs%20Code.png" alt=""><span>VS Code</span></li>
+                    <li><img src="Skills/MongoDB.png" alt=""><span>MongoDB</span></li>
                 </ul>
             </div>
 
-   </div>
+  </div>
         <div id="projects">
             <div class="container">
                 <h2>Projects</h2>
@@ -61,7 +61,7 @@
                         <button class="project-card" type="button" data-title="Exercise"
                             data-description="A project focused on exercise and fitness." data-image="Work/Exercise.png"
                             aria-haspopup="dialog">
-                            <img src="Work/Exercise.png" alt="" width="100" height="100">
+                            <img src="Work/Exercise.png" alt="">
                             <strong>Exercise</strong>
                             <span>A project focused on exercise and fitness.</span>
                             <span class="project-card-prompt">View details</span>
@@ -71,7 +71,7 @@
                         <button class="project-card" type="button" data-title="Food Delivery"
                             data-description="A project exploring a food delivery experience."
                             data-image="Work/Food%20Delivery.png" aria-haspopup="dialog">
-                            <img src="Work/Food%20Delivery.png" alt="" width="100" height="100">
+                            <img src="Work/Food%20Delivery.png" alt="">
                             <strong>Food Delivery</strong>
                             <span>A project exploring a food delivery experience.</span>
                             <span class="project-card-prompt">View details</span>
@@ -81,7 +81,7 @@
                         <button class="project-card" type="button" data-title="Maps"
                             data-description="A project focused on maps and location information."
                             data-image="Work/Maps.png" aria-haspopup="dialog">
-                            <img src="Work/Maps.png" alt="" width="100" height="100">
+                            <img src="Work/Maps.png" alt="">
                             <strong>Maps</strong>
                             <span>A project focused on maps and location information.</span>
                             <span class="project-card-prompt">View details</span>
@@ -92,7 +92,7 @@
                             data-description="A project showcasing my skills and experience."
                             data-image="Work/Portfolio.png" data-github="https://github.com/wiselymokua/walk"
                             aria-haspopup="dialog">
-                            <img src="Work/Portfolio.png" alt="" width="100" height="100">
+                            <img src="Work/Portfolio.png" alt="">
                             <strong>My Portfolio</strong>
                             <span>A project showcasing my skills and experience.</span>
                             <span class="project-card-prompt">View details</span>
@@ -119,19 +119,17 @@
                 <ul class="service-list">
                     <li>
                         <img src="Services/Web%20Development.png"
-                            alt="A hand reaches toward a glowing digital interface labeled WEB DEVELOPMENT, surrounded by icons for code, cloud services, mobile devices, documents, laptops, and databases on a dark blue connected technology background"
-                            width="100" height="100">
+                            alt="A hand reaches toward a glowing digital interface labeled WEB DEVELOPMENT, surrounded by icons for code, cloud services, mobile devices, documents, laptops, and databases on a dark blue connected technology background">
                         <h3>Basic Website Development</h3>
                         <p>Building websites with HTML, CSS, JavaScript, and React.</p>
                     </li>
                     <li>
-                        <img src="Services/Responsive%20Design.png" alt="Responsive design preview across screen sizes"
-                            width="100" height="100">
+                        <img src="Services/Responsive%20Design.png" alt="Responsive design preview across screen sizes">
                         <h3>Basic Responsive Web Design</h3>
                         <p>Creating layouts that adapt to phones, tablets, and desktop screens.</p>
                     </li>
                     <li>
-                        <img src="Services/website%20update.png" alt="Website update preview" width="100" height="100">
+                        <img src="Services/website%20update.png" alt="Website update preview">
                         <h3>Basic Website Updates</h3>
                         <p>Improving the content, layout, and styling of existing web pages.</p>
                     </li>
@@ -145,18 +143,17 @@
                     <p>If you would like to get in touch with me reach out to me via
                         email or social media.</p>
                     <ul class="contact-details">
-                        <li><img src="Contact/phone.png" alt="" width="26" height="26"><a href="tel:+254727817470">072
+                        <li><img src="Contact/phone.png" alt=""><a href="tel:+254727817470">072
                                 781 7470</a></li>
-                        <li><img src="Contact/E%20mail.png" alt="" width="26" height="26"><a
+                        <li><img src="Contact/E%20mail.png" alt=""><a
                                 href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mokuawisely83%40gmail.com"
                                 target="_blank" rel="noopener noreferrer">mokuawisely83@gmail.com</a></li>
-                        <li><img src="Contact/Linked%20in.png" alt="" width="26" height="26"><a
+                        <li><img src="Contact/Linked%20in.png" alt=""><a
                                 href="https://www.linkedin.com/in/wisely-mokua-b836ab419" target="_blank"
                                 rel="noopener noreferrer">LinkedIn</a></li>
-                        <li><img src="Contact/Github.png" alt="" width="26" height="26"><a
-                                href="https://github.com/wiselymokua" target="_blank"
-                                rel="noopener noreferrer">GitHub</a></li>
-                        <li><img src="Contact/Location.png" alt="" width="26" height="26"><span>Nairobi, Kenya</span>
+                        <li><img src="Contact/Github.png" alt=""><a href="https://github.com/wiselymokua"
+                                target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><img src="Contact/Location.png" alt=""><span>Nairobi, Kenya</span>
                         </li>
                     </ul>
                 </div>
