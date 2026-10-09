@@ -66,7 +66,7 @@ if (hasDocument) {
         try {
             const [profileResponse, reposResponse] = await Promise.all([
                 fetch(`https://api.github.com/users/${githubUsername}`, { headers }),
-                fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`, { headers })
+                fetch(`https://api.github.com/users/${githubUsername}/repos?type=owner&sort=updated&per_page=100`, { headers })
             ]);
 
             if (!profileResponse.ok || !reposResponse.ok) {
@@ -75,39 +75,96 @@ if (hasDocument) {
 
             const profile = await profileResponse.json();
             const repos = await reposResponse.json();
+            const profileUrl = `https://github.com/${encodeURIComponent(profile.login)}`;
+            const avatarLink = document.createElement("a");
+            avatarLink.className = "github-avatar-link";
+            avatarLink.href = profileUrl;
+            avatarLink.target = "_blank";
+            avatarLink.rel = "noopener noreferrer";
 
-            githubProfile.innerHTML = `
-                <a class="github-avatar-link" href="${profile.html_url}" target="_blank" rel="noopener noreferrer">
-                    <img src="${profile.avatar_url}" alt="${profile.login} GitHub avatar" class="github-avatar" loading="lazy">
-                </a>
-                <div class="github-profile-info">
-                    <h3>${profile.name || profile.login}</h3>
-                    <p>${profile.bio || "Developer sharing projects and experiments."}</p>
-                    <div class="github-stats">
-                        <span><strong>${profile.public_repos}</strong> repos</span>
-                        <span><strong>${profile.followers}</strong> followers</span>
-                        <span><strong>${profile.following}</strong> following</span>
-                    </div>
-                    <a class="github-link" href="${profile.html_url}" target="_blank" rel="noopener noreferrer">View profile on GitHub</a>
-                </div>
-            `;
+            const avatar = document.createElement("img");
+            avatar.src = profile.avatar_url;
+            avatar.alt = `${profile.login} GitHub avatar`;
+            avatar.className = "github-avatar";
+            avatar.loading = "lazy";
+            avatarLink.append(avatar);
 
-            githubReposList.innerHTML = repos
+            const profileInfo = document.createElement("div");
+            profileInfo.className = "github-profile-info";
+
+            const name = document.createElement("h3");
+            name.textContent = profile.name || profile.login;
+            profileInfo.append(name);
+
+            const bio = document.createElement("p");
+            bio.textContent = profile.bio || "Developer sharing projects and experiments.";
+            profileInfo.append(bio);
+
+            const stats = document.createElement("div");
+            stats.className = "github-stats";
+            [
+                `${profile.public_repos} repos`,
+                `${profile.followers} followers`,
+                `${profile.following} following`
+            ].forEach((label) => {
+                const stat = document.createElement("span");
+                stat.textContent = label;
+                stats.append(stat);
+            });
+            profileInfo.append(stats);
+
+            const profileLink = document.createElement("a");
+            profileLink.className = "github-link";
+            profileLink.href = profileUrl;
+            profileLink.target = "_blank";
+            profileLink.rel = "noopener noreferrer";
+            profileLink.textContent = "View profile on GitHub";
+            profileInfo.append(profileLink);
+
+            githubProfile.replaceChildren(avatarLink, profileInfo);
+
+            const repositories = repos
                 .filter((repo) => !repo.fork)
-                .slice(0, 6)
-                .map((repo) => `
-                    <li class="github-repo-item">
-                        <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>
-                        <p>${repo.description || "No description available yet."}</p>
-                        <div class="github-repo-meta">
-                            <span>${repo.language || "Code"}</span>
-                            <span>★ ${repo.stargazers_count}</span>
-                            <span>⎇ ${repo.forks_count}</span>
-                        </div>
-                    </li>
-                `)
-                .join("");
-        } catch (error) {
+                .slice(0, 6);
+
+            if (repositories.length === 0) {
+                const emptyState = document.createElement("li");
+                emptyState.className = "github-repo-item";
+                emptyState.textContent = "No public repositories to display yet.";
+                githubReposList.replaceChildren(emptyState);
+                return;
+            }
+
+            githubReposList.replaceChildren(...repositories.map((repo) => {
+                const item = document.createElement("li");
+                item.className = "github-repo-item";
+
+                const link = document.createElement("a");
+                link.href = repo.html_url;
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+                link.textContent = repo.name;
+                item.append(link);
+
+                const description = document.createElement("p");
+                description.textContent = repo.description || "No description available yet.";
+                item.append(description);
+
+                const metadata = document.createElement("div");
+                metadata.className = "github-repo-meta";
+                [
+                    repo.language || "Code",
+                    `★ ${repo.stargazers_count}`,
+                    `⎇ ${repo.forks_count}`
+                ].forEach((label) => {
+                    const value = document.createElement("span");
+                    value.textContent = label;
+                    metadata.append(value);
+                });
+                item.append(metadata);
+                return item;
+            }));
+        } catch {
             githubProfile.innerHTML = `
                 <div class="github-error">
                     <p>GitHub profile could not be loaded right now.</p>
